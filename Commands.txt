@@ -4,4 +4,9 @@ git --version
 terraform init
 terraform plan
 terraform apply --auto-approve
+
+terraform apply -var-file=security_group/terraform.dev.tfvars --auto-approve
+
+terraform apply -var-file=./security_group/terraform.prod.tfvars --auto-approve
+
 terraform destroy --auto-approve
